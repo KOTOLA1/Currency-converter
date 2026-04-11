@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter | Real-time Exchange Rates</title>
+    <meta name="description" content="A simple, modern currency converter with real-time exchange rates. Convert USD, EUR, GBP, ETB and more.">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-mode">
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-coins"></i>
+                <h1>Currency <span>Converter</span></h1>
+            </div>
+            <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode">
+                <i class="fas fa-moon"></i>
+            </button>
+        </header>
+
+        <main class="converter-box">
+            <div class="input-group">
+                <label for="amount">Enter Amount</label>
+                <input type="number" id="amount" value="1" placeholder="0.00">
+            </div>
+
+            <div class="selection-group">
+                <div class="from-box">
+                    <label>From</label>
+                    <div class="select-container">
+                        <img src="https://flagsapi.com/US/flat/64.png" alt="Flag" id="from-flag">
+                        <select id="from-currency">
+                            <!-- Options will be populated by JS -->
+                        </select>
+                    </div>
+                </div>
+
+                <div class="swap-btn-container">
+                    <button id="swap-btn" title="Swap Currencies">
+                        <i class="fas fa-exchange-alt"></i>
+                    </button>
+                </div>
+
+                <div class="to-box">
+                    <label>To</label>
+                    <div class="select-container">
+                        <img src="https://flagsapi.com/ET/flat/64.png" alt="Flag" id="to-flag">
+                        <select id="to-currency">
+                            <!-- Options will be populated by JS -->
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="result-area">
+                <div id="exchange-rate" class="rate-text">1 USD = --- ETB</div>
+                <div id="result" class="result-text">---</div>
+            </div>
+
+            <button id="convert-btn" class="main-btn">
+                <span id="btn-text">Get Exchange Rate</span>
+                <i class="fas fa-sync-alt loader-icon" id="loader"></i>
+            </button>
+        </main>
+
+        <footer>
+            <p>Rates are real-time and provided by <a href="https://www.exchangerate-api.com" target="_blank">ExchangeRate-API</a></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
