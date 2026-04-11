@@ -12,11 +12,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="light-mode">
+    <!-- Background Shapes -->
+    <div class="bg-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+    </div>
+
     <div class="container">
         <header>
             <div class="logo">
-                <i class="fas fa-coins"></i>
-                <h1>Currency <span>Converter</span></h1>
+                <i class="fas fa-money-bill-transfer"></i>
+                <h1>Currency <span>Pro</span></h1>
             </div>
             <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode">
                 <i class="fas fa-moon"></i>
@@ -25,13 +31,12 @@
 
         <main class="converter-box">
             <div class="input-group">
-                <label for="amount">Enter Amount</label>
-                <input type="number" id="amount" value="1" placeholder="0.00">
+                <label for="amount">Amount to Convert</label>
+                <input type="number" id="amount" value="1" placeholder="0.00" min="1">
             </div>
 
             <div class="selection-group">
                 <div class="from-box">
-                    <label>From</label>
                     <div class="select-container">
                         <img src="https://flagsapi.com/US/flat/64.png" alt="Flag" id="from-flag">
                         <select id="from-currency">
@@ -42,12 +47,11 @@
 
                 <div class="swap-btn-container">
                     <button id="swap-btn" title="Swap Currencies">
-                        <i class="fas fa-exchange-alt"></i>
+                        <i class="fas fa-retweet"></i>
                     </button>
                 </div>
 
                 <div class="to-box">
-                    <label>To</label>
                     <div class="select-container">
                         <img src="https://flagsapi.com/ET/flat/64.png" alt="Flag" id="to-flag">
                         <select id="to-currency">
@@ -57,19 +61,19 @@
                 </div>
             </div>
 
-            <div class="result-area">
+            <div class="result-area" id="result-area">
                 <div id="exchange-rate" class="rate-text">1 USD = --- ETB</div>
                 <div id="result" class="result-text">---</div>
             </div>
 
             <button id="convert-btn" class="main-btn">
-                <span id="btn-text">Get Exchange Rate</span>
-                <i class="fas fa-sync-alt loader-icon" id="loader"></i>
+                <span id="btn-text">Convert Now</span>
+                <i class="fas fa-circle-notch loader-icon" id="loader"></i>
             </button>
         </main>
 
         <footer>
-            <p>Rates are real-time and provided by <a href="https://www.exchangerate-api.com" target="_blank">ExchangeRate-API</a></p>
+            <p>Precise rates by <a href="https://www.exchangerate-api.com" target="_blank">ExchangeRate-API</a></p>
         </footer>
     </div>
 
