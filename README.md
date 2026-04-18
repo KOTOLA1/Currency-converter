@@ -2,7 +2,6 @@
 
 A sleek, modern, and high-performance Currency Converter built with Vanilla JavaScript, HTML5, and CSS3. This application provides real-time exchange rates with a premium user experience and dark mode support.
 
-![Currency Converter Preview](https://via.placeholder.com/800x450?text=Currency+Converter+UI+Preview) <!-- You can replace this with a real screenshot of your app -->
 
 ## ✨ Features
 
