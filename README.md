@@ -4,6 +4,7 @@ A sleek, modern, and high-performance Currency Converter built with Vanilla Java
 
 ## ✨ Features
 
+
 - **🌐 Real-time Exchange Rates**: Fetches live data from the ExchangeRate-API.
 - **🌗 Dark Mode**: Seamlessly switch between light and dark themes with persistent storage.
 - **📱 Fully Responsive**: Optimized for every screen size from mobile to desktop.
